@@ -112,11 +112,21 @@ article p{
  .menulateral:hover{
     height: 25em;
     width: 25em;
+    
    }
+ .menulateral:hover li{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    margin-right: 100%;
+    right: 50%;
+    
+ }
  .menulateral:hover a {
-    margin: 50%;
+    margin: 20%;
     color: white;
     visibility: visible;
+    display: inline-block;
+    
 
 }
 
@@ -154,5 +164,62 @@ article p{
     margin: 0;
     font-size: 1em;
     color: #666;
+  }
+
+article h2{
+    position: flex;
+    text-align: center;
+    font-size: 1em;
+    
+}
+
+
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 800px));
+    grid-gap: 10px;
+  }
+  
+  .objeto_galeria {
+    width: 150%;
+    height: 150%;
+    object-fit:fill;
+  }
+  
+
+  .galeria_pequeña {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* reducimos el tamaño mínimo */
+    grid-gap: 1px; /* reducimos el espacio entre las imágenes */
+  }
+  
+  .objeto_galeria_pequeña {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    /* Disposición para teléfonos móviles */
+    body {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    article h2{
+        display: flex;
+        margin-top: 8%;
+        color: white;
+        background-color: #333;
+    }
+    .menulateral{
+        display: none;
+    }
+
+    .gallery-item-small{
+        display: flex;
+        margin-top: 60%;
+    }
+
   }
   
